@@ -1,0 +1,220 @@
+object Form1: TForm1
+  Left = 350
+  Height = 393
+  Top = 180
+  Width = 524
+  BorderIcons = [biSystemMenu]
+  Caption = 'WBot Demo'
+  ClientHeight = 393
+  ClientWidth = 524
+  Position = poScreenCenter
+  LCLVersion = '2.2.4.0'
+  object Button1: TButton
+    Left = 8
+    Height = 56
+    Top = 8
+    Width = 96
+    Caption = 'Login WA'
+    OnClick = Button1Click
+    TabOrder = 0
+  end
+  object LStatus: TLabel
+    Left = 8
+    Height = 17
+    Top = 368
+    Width = 38
+    Caption = 'Status'
+    Font.CharSet = ANSI_CHARSET
+    Font.Height = -13
+    Font.Pitch = fpVariable
+    Font.Quality = fqDraft
+    Font.Style = [fsBold]
+    ParentColor = False
+    ParentFont = False
+  end
+  object GroupBox1: TGroupBox
+    Left = 8
+    Height = 144
+    Top = 80
+    Width = 281
+    Caption = 'Inbox'
+    ClientHeight = 124
+    ClientWidth = 277
+    TabOrder = 1
+    object Label1: TLabel
+      Left = 8
+      Height = 15
+      Top = 8
+      Width = 50
+      Caption = 'Sender ID'
+      ParentColor = False
+    end
+    object Label2: TLabel
+      Left = 8
+      Height = 15
+      Top = 32
+      Width = 71
+      Caption = 'Sender Name'
+      ParentColor = False
+    end
+    object Edit1: TEdit
+      Left = 88
+      Height = 23
+      Top = 0
+      Width = 176
+      Enabled = False
+      TabOrder = 0
+    end
+    object Edit2: TEdit
+      Left = 88
+      Height = 23
+      Top = 28
+      Width = 176
+      Enabled = False
+      TabOrder = 1
+    end
+    object Label3: TLabel
+      Left = 8
+      Height = 15
+      Top = 59
+      Width = 46
+      Caption = 'Message'
+      ParentColor = False
+    end
+    object Memo1: TMemo
+      Left = 88
+      Height = 53
+      Top = 59
+      Width = 176
+      Enabled = False
+      TabOrder = 2
+    end
+  end
+  object ContactListBox: TListBox
+    Left = 296
+    Height = 112
+    Top = 112
+    Width = 100
+    ItemHeight = 0
+    OnDblClick = ContactListBoxDblClick
+    TabOrder = 2
+  end
+  object Button2: TButton
+    Left = 296
+    Height = 25
+    Top = 80
+    Width = 99
+    Caption = 'Get Contact '
+    OnClick = Button2Click
+    TabOrder = 3
+  end
+  object GroupListBox: TListBox
+    Left = 408
+    Height = 112
+    Top = 112
+    Width = 100
+    ItemHeight = 0
+    OnDblClick = GroupListBoxDblClick
+    TabOrder = 4
+  end
+  object Button3: TButton
+    Left = 408
+    Height = 25
+    Top = 80
+    Width = 104
+    Caption = 'Get Group'
+    OnClick = Button3Click
+    TabOrder = 5
+  end
+  object GroupBox2: TGroupBox
+    Left = 8
+    Height = 128
+    Top = 232
+    Width = 500
+    Caption = 'Send Message'
+    ClientHeight = 108
+    ClientWidth = 496
+    TabOrder = 6
+    object Label4: TLabel
+      Left = 8
+      Height = 15
+      Top = 8
+      Width = 74
+      Caption = 'Destination ID'
+      ParentColor = False
+    end
+    object Edit3: TEdit
+      Left = 88
+      Height = 23
+      Top = 8
+      Width = 176
+      Enabled = False
+      TabOrder = 0
+    end
+    object Label5: TLabel
+      Left = 8
+      Height = 15
+      Top = 56
+      Width = 46
+      Caption = 'Message'
+      ParentColor = False
+    end
+    object Memo2: TMemo
+      Left = 88
+      Height = 40
+      Top = 57
+      Width = 176
+      TabOrder = 1
+    end
+    object Button4: TButton
+      Left = 272
+      Height = 41
+      Top = 56
+      Width = 75
+      Caption = 'Send'
+      OnClick = Button4Click
+      TabOrder = 2
+    end
+    object Label6: TLabel
+      Left = 88
+      Height = 13
+      Top = 32
+      Width = 268
+      Caption = 'Double Click Contact or Group List to Fill Destination ID'
+      Font.CharSet = ANSI_CHARSET
+      Font.Height = -11
+      Font.Pitch = fpVariable
+      Font.Quality = fqDraft
+      Font.Style = [fsItalic]
+      ParentColor = False
+      ParentFont = False
+    end
+  end
+  object CheckBox1: TCheckBox
+    Left = 272
+    Height = 19
+    Top = 8
+    Width = 88
+    Caption = 'Auto Respon'
+    TabOrder = 7
+  end
+  object Memo3: TMemo
+    Left = 272
+    Height = 38
+    Top = 30
+    Width = 240
+    Lines.Strings = (
+      'This is auto respon message from wbot (Lazarus Free Pascal) if you say Hello'
+    )
+    TabOrder = 8
+  end
+  object WBot1: TWBot
+    OnConnected = WBot1Connected
+    OnDisconnected = WBot1Disconnected
+    OnRequestChat = WBot1RequestChat
+    OnRequestContact = WBot1RequestContact
+    OnRequestGroups = WBot1RequestGroups
+    Left = 128
+    Top = 16
+  end
+end

@@ -7,7 +7,7 @@ It is based on the official Whatsapp Web Browser Application and uses Chromium b
 
 ## Dependent
 
-This project depends on the following package: [CEF4Delphi](https://github.com/salvadordf/CEF4Delphi) and [Projeto-TInject](https://raw.githubusercontent.com/mikelustosa/Projeto-TInject/master/Source/JS/js.abr)
+This project depends on the following package: [CEF4Delphi](https://github.com/salvadordf/CEF4Delphi) and .js File from [Projeto-TInject](https://raw.githubusercontent.com/mikelustosa/Projeto-TInject/master/Source/JS/js.abr)
 
 ## Features
 

@@ -16,7 +16,7 @@ This project depends on the following package: [CEF4Delphi](https://github.com/s
 - Send text messages
 - Send messages to groups
 - List contacts
-- List chats
+- List Group
 - Auto Respon
 - Monitor incoming messages
 

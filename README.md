@@ -1,6 +1,6 @@
 ## Introduction
 
-This package adapted dan modified from https://github.com/groupsc10-zz/WBot
+This package adapted and modified from https://github.com/groupsc10-zz/WBot
 
 Lazarus Free Pascal package for interacting with WhatsApp Web to send and receive messages
 It is based on the official Whatsapp Web Browser Application and uses Chromium browser automation to communicate with Whatsapp Web.

@@ -54,8 +54,6 @@ begin
       UnicodeString(LocalIni.ReadString('Paths', 'Locales', 'cef'+ PathDelim + 'locales'));
     GlobalCEFApp.Cache :=
       UnicodeString(LocalIni.ReadString('Paths', 'Cache', 'tmp' + PathDelim + 'cache'));
-    //GlobalCEFApp.UserDataPath :=
-     // UnicodeString(LocalIni.ReadString('Paths', 'UserData', 'tmp' + PathDelim + 'user'));
   end;
   Result := GlobalCEFApp.StartMainProcess;
 end;

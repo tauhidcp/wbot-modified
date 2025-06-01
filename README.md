@@ -14,6 +14,7 @@ This project depends on the following package: [CEF4Delphi](https://github.com/s
 - Login
 - Logout
 - Send text messages
+- Send File
 - Send messages to groups
 - List contacts
 - List Group

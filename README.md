@@ -16,7 +16,7 @@ This project depends on the following package: [CEF4Delphi](https://github.com/s
 - Send text messages
 - Monitor incoming messages
 - Send File
-- Download File (adapted from Projeto-TInject download)
+- Download File (adapted from Projeto-TInject)
 - Send messages to groups
 - List contacts
 - List Group

@@ -6,7 +6,7 @@ interface
 
 uses
 Classes, SysUtils, Forms, Controls, Graphics, Dialogs, StdCtrls, ComCtrls,
-ExtCtrls, StrUtils, WBot_Core, WBot_Model, WBot_Utils;
+ExtCtrls, StrUtils, WBot_Core, WBot_Model, WBot_Utils, wbot_decrypt_file;
 
 type
 
@@ -156,6 +156,7 @@ procedure TForm1.WBot1RequestChat(const ASender: TObject;
 var
   VChat: TChat;
   VMsg: TMessage;
+  WbotDecrypt: TWbot_Decrypt_File;
 begin
   for VChat in AChats.Result do
   begin
@@ -175,6 +176,16 @@ begin
             AutoRespon(Edit1.Text, Memo1.Text);
           end;
           // End Auto Respon
+          // Download File
+          case AnsiIndexStr(UpperCase(VMsg.&type), ['PTT', 'IMAGE', 'VIDEO', 'AUDIO', 'DOCUMENT']) of
+              0: begin WbotDecrypt.download(VMsg.deprecatedMms3Url, VMsg.mediaKey, 'mp3', VMsg.Id); end;
+              1: begin WbotDecrypt.download(VMsg.deprecatedMms3Url, VMsg.mediaKey, 'jpg', VMsg.id); end;
+              2: begin WbotDecrypt.download(VMsg.deprecatedMms3Url, VMsg.mediaKey, 'mp4', VMsg.id); end;
+              3: begin WbotDecrypt.download(VMsg.deprecatedMms3Url, VMsg.mediaKey, 'mp3', VMsg.id); end;
+              4: begin WbotDecrypt.download(VMsg.deprecatedMms3Url, VMsg.mediaKey, 'pdf', VMsg.id); end;
+            end;
+          // End Download File
+          WBot1.ReadMsg(VChat.Contact.Id);
         end;
       end;
     end;

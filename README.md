@@ -14,12 +14,13 @@ This project depends on the following package: [CEF4Delphi](https://github.com/s
 - Login
 - Logout
 - Send text messages
+- Monitor incoming messages
 - Send File
+- Download File (adapted from Projeto-TInject download)
 - Send messages to groups
 - List contacts
 - List Group
 - Auto Respon
-- Monitor incoming messages
 
 ## License
 This project is released under MIT license

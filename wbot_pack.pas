@@ -9,7 +9,7 @@ interface
 
 uses
   WBot_Const, WBot_Config, WBot_Utils, WBot_Model, WBot_Form, WBot_Core, 
-  LazarusPackageIntf;
+  wbot_decrypt_file, LazarusPackageIntf;
 
 implementation
 

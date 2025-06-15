@@ -17,7 +17,7 @@
       </Linking>
     </CompilerOptions>
     <Version Minor="1" Release="1" Build="1"/>
-    <Files Count="6">
+    <Files Count="7">
       <Item1>
         <Filename Value="wbot_const.pas"/>
         <UnitName Value="WBot_Const"/>
@@ -43,6 +43,10 @@
         <HasRegisterProc Value="True"/>
         <UnitName Value="WBot_Core"/>
       </Item6>
+	  <Item7>
+        <Filename Value="wbot_decrypt_file.pas"/>
+        <UnitName Value="Wbot_Decrypt_File"/>
+      </Item7>
     </Files>
     <RequiredPkgs Count="2">
       <Item1>

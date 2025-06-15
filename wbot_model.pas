@@ -390,6 +390,7 @@ type
     FFilename: string;
     FFrom: string;
     FId: string;
+	FdeprecatedMms3Url : String; // download file
     FInvis: boolean;
     FIsForwarded: boolean;
     FIsGroupMsg: boolean;
@@ -433,6 +434,7 @@ type
     property Content: string read FContent write FContent;
     property From: string read FFrom write FFrom;
     property Id: string read FId write FId;
+	property deprecatedMms3Url: string read FdeprecatedMms3Url write FdeprecatedMms3Url; // download file
     property Invis: boolean read FInvis write FInvis;
     property IsForwarded: boolean read FIsForwarded write FIsForwarded;
     property IsGroupMsg: boolean read FIsGroupMsg write FIsGroupMsg;

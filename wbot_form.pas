@@ -19,7 +19,7 @@ uses
   // CEF
   uCEFWindowParent, uCEFChromium, uCEFTypes, uCEFInterfaces, uCEFApplication,
   // WBot
-  WBot_Const, WBot_Utils, WBot_Model;
+  WBot_Const, WBot_Utils, WBot_Model, Wbot_Decrypt_File;
 
 type
 
